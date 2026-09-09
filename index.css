@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #0A0A0A;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold-gradient px-6 py-3 font-semibold text-charcoal shadow-gold transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98];
+  }
+  .btn-outline-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-gold/60 px-6 py-3 font-semibold text-gold-light transition-colors duration-200 hover:bg-gold/10;
+  }
+  .section {
+    @apply mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8;
+  }
+  .card {
+    @apply rounded-2xl border border-white/10 bg-onyx/80 backdrop-blur-sm;
+  }
+  .input-field {
+    @apply w-full rounded-lg border border-white/15 bg-black/40 px-4 py-2.5 text-sm text-white placeholder-white/40 outline-none transition focus:border-gold focus:ring-1 focus:ring-gold;
+  }
+  .label-field {
+    @apply mb-1.5 block text-sm font-medium text-silver;
+  }
+}
+
+/* subtle gold scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #9C7A22;
+  border-radius: 999px;
+}
